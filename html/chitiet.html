@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link href="/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/taiKhoan.css">
+    <link rel="stylesheet" href="/bootstrap/elegant-icons.css">
+    <script src="/bootstrap/jquery-3.7.1.min.js"></script>
+    <script src="/bootstrap/bootstrap.min copy.js"></script>
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>  
+    <script src="/bootstrap/jquery.nice-select.min.js"></script>
+    <link rel="stylesheet" href="/css/chitiet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <header>
+                <div class="row">
+                  <div class="col-10">
+                    <img src="/img/Logo-removebg-preview.png" alt="">
+                  </div>
+                  <div class="col-2 btnLog">
+                    <button class="nut1" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button>
+                    <button class="nut2" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng ký</button>
+                    <p id="wellcome">*</p>
+                  </div>
+                </div>
+              </header>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/html/index.html">Trang Chủ</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/sanpham.html">Sản phẩm</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/gioithieu.html">Giới thiệu</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/taiKhoan.html">Tài khoản</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="text" placeholder="Search">
+                      <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <div id="productDetails">
+                    <!-- Hiển thị thông tin sản phẩm từ Local Storage -->
+                    <img src="" alt="" id="productImg" width="100%" height="auto" class="img-thumbnail mt-4">
+                </div>
+            </div>
+            <div class="col-7">
+                <div id="productDetails">
+                    <!-- Hiển thị thông tin sản phẩm từ Local Storage -->
+                    <br>
+                    <h1 id="productName"></h1>
+                    <br>
+                    <h2 id="productPrice" class="gia"></h2>
+                    <br>
+                    <div class="row">
+                        <div class="col-2">
+                            <h5 style="line-height: 50px;">Số lượng:</h5>
+                        </div>
+                        <div class="col">
+                            <div class="product__details__quantity">
+                                <div class="quantity">
+                                    <div class="pro-qty">
+                                        <input type="text" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <br>
+                            <button type="button" class="btn btn-primary" style="width: 20%; height: auto;" >Mua</button>
+                            <button type="button" class="btn btn-secondary" style="width: 30%; height: auto;">Thêm vào giỏ hàng</button>
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="brandnote" bis_skin_checked="1"><i>(Giá tại miền Trung xin vui lòng liên hệ)</i></div>
+                    <div class="col mt-3">
+                        <ul>
+                            <li><strong>Mã SP:</strong> MDW14-BS10TFT</li>
+                            <li><strong>Thương hiệu:</strong> MALLOCA</li>
+                            <li><strong>Xuất xứ:</strong> Thổ Nhĩ Kỳ</li>
+                            <li><strong>Bảo hành:</strong> 3 năm</li>
+                            <li><strong>Trạng thái:</strong> 100</li>
+                        </ul>
+                    </div>
+                    <div class="col mt-3">
+                        <ul>
+                            <li><strong>Vận chuyển:</strong> Miễn phí</li>
+                            <li><strong>Lắp đặt:</strong> Miễn phí</li>
+                            <li><strong>Tư vấn:</strong> Miễn phí</li>
+                            <li><strong>Thanh toán:</strong> TM/CK</li>
+                            <li><strong>Đổi trả:</strong> 3 ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product__details__tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                aria-selected="true">Thông tin sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                                aria-selected="false">Mô tả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                                aria-selected="false">Đánh giá <span>(1)</span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Thông tin sản phẩm</h6>
+                                <p> Sản phẩm có xuất xứ từ Châu Âu được trang bị nhiều công nghệ hiện đại như Sấy Zeolite® (Zeolith) 
+                                    – khô nhanh hơn với mức tiêu thụ năng lượng ít hơn, Ngăn kéo Vario cung cấp không gian 
+                                    cho các dụng cụ dao kéo lớn,… và nhiều tính năng hiện đại khác giúp chén bát của bạn sạch 
+                                    và khô hoàn hảo., 
+                                    mang đến cho người dùng những trải nghiệm hoàn toàn mới.
+                                </p>
+                                <h6>Đặc điểm nổi bật</h6>
+                                <ul>
+                                    <li>Thiết kế độc lập linh hoạt vị trí lắp đặt (có thể đặt âm). Máy được làm từ chất liệu thép không gỉ, bề mặt màu inox có lớp phủ chống bám vân tay. Tổng thể của chiếc máy giúp nhà bếp của bạn trở nên sang trọng và tinh tế hơn.</li>
+                                    <li>Bảng điều khiển đặt ở phía trước thân máy với các phím cảm ứng cùng màn hình LED hiển thị thời gian, thông báo giúp bạn vận hành và theo dõi chu trình rửa dễ dàng.</li>
+                                    <li>Hệ thống phân phối viên rửa dosing assistant thông minh</li>
+                                    <li>Tự vệ sinh: tính năng sẽ thực hiện xả lượng nước như quá trình rửa full tải với nhiệt độ cao giúp làm sạch khoang máy để sẵn sàng cho những lần rửa tiếp theo.</li>
+                                </ul>
+                                <h6>Hoạt động và tiêu thụ năng lượng</h6>
+                                <ul>
+                                    <li>Nhãn năng lượng: B</li>
+                                    <li>Điện / nước: 65 kWh / 9 liters</li>
+                                    <li>Thời gian Eco: 3h35′</li>
+                                    <li>Độ ồn: 40 dB</li>
+                                    <li>Nhãn độ ồn: B</li>
+                                    <li>Độ ồn yên lượng: 39 dB</li>
+                                </ul>
+                                <h6>Tính năng an toàn của máy rửa bát Bosch SMS6ZCI16E</h6>
+                                <ul>
+                                    <li>Khóa trẻ em (ChildLock): là tính năng khóa các chương trình máy đang hoạt động nhằm ngăn chặn sự thay đổi khi chẳng may trẻ chạm vào bảng điều khiển.</li>
+                                    <li>Hệ thống AquaStop: là hệ thống chống tràn 24/24 tự động ngắt hoạt động máy khi rò rỉ hoặc tràn nước ra bên ngoài.</li>
+                                    <li>Hệ thống chống sét lan truyền: là hệ thống dây nối đất nhằm hạn chế giật điện khi chạm vào khoang máy. Đồng thời bảo vệ người dùng khi gặp thời tiết cực đoan.</li>
+                                </ul>
+                                <h6>Thông số kỹ kỹ thuật của máy rửa bát Bosch SMS6ZCI16E</h6>
+                                <ul>
+                                    <li>Dung tích: 14 bộ đồ ăn Châu Âu</li>
+                                    <li>Kích thước (CxRxS): 845 x 600 x 600 mm</li>
+                                    <li>Trọng lượng tịnh: 54.4 kg</li>
+                                    <li>Chất liệu: Thép không gỉ</li>
+                                    <li>Màu sắc: sơn màu Inox</li>
+                                    <li>Công suất: 2400W</li>
+                                    <li>Điện áp: 220V – 240V</li>
+                                    <li>Tần số: 50-60Hz</li>
+                                    <li>Chiều dài dây cắm: 175cm</li>
+                                    <li>Cường độ dòng điện: 10A</li>
+                                    <li>Chiều dài ống đầu vào: 165cm</li>
+                                    <li>Chiều dài ống thoát: 190cm</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-2" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Mô tả</h6>
+                                <h6>Hoạt động và tiêu thụ năng lượng</h6>
+                                <ul>
+                                    <li>Nhãn năng lượng: B</li>
+                                    <li>Điện / nước: 65 kWh / 9 liters</li>
+                                    <li>Thời gian Eco: 3h35′</li>
+                                    <li>Độ ồn: 40 dB</li>
+                                    <li>Nhãn độ ồn: B</li>
+                                    <li>Độ ồn yên lượng: 39 dB</li>
+                                </ul>
+                                <h6>Tính năng an toàn của máy rửa bát Bosch SMS6ZCI16E</h6>
+                                <ul>
+                                    <li>Khóa trẻ em (ChildLock): là tính năng khóa các chương trình máy đang hoạt động nhằm ngăn chặn sự thay đổi khi chẳng may trẻ chạm vào bảng điều khiển.</li>
+                                    <li>Hệ thống AquaStop: là hệ thống chống tràn 24/24 tự động ngắt hoạt động máy khi rò rỉ hoặc tràn nước ra bên ngoài.</li>
+                                    <li>Hệ thống chống sét lan truyền: là hệ thống dây nối đất nhằm hạn chế giật điện khi chạm vào khoang máy. Đồng thời bảo vệ người dùng khi gặp thời tiết cực đoan.</li>
+                                </ul>
+                                <h6>Thông số kỹ kỹ thuật của máy rửa bát Bosch SMS6ZCI16E</h6>
+                                <ul>
+                                    <li>Dung tích: 14 bộ đồ ăn Châu Âu</li>
+                                    <li>Kích thước (CxRxS): 845 x 600 x 600 mm</li>
+                                    <li>Trọng lượng tịnh: 54.4 kg</li>
+                                    <li>Chất liệu: Thép không gỉ</li>
+                                    <li>Màu sắc: sơn màu Inox</li>
+                                    <li>Công suất: 2400W</li>
+                                    <li>Điện áp: 220V – 240V</li>
+                                    <li>Tần số: 50-60Hz</li>
+                                    <li>Chiều dài dây cắm: 175cm</li>
+                                    <li>Cường độ dòng điện: 10A</li>
+                                    <li>Chiều dài ống đầu vào: 165cm</li>
+                                    <li>Chiều dài ống thoát: 190cm</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-3" role="tabpanel">
+                            <div class="product__details__tab__desc" style="text-indent: 50px; width: 80%; margin: auto;">
+                                <h6>Đánh giá</h6>
+                                <p>
+                                    Là đơn vị tiên phong trong lĩnh vực thiết bị nhà bếp, phòng tắm, nội thất, Bếp 365 luôn nỗ lực "giữ lửa cuộc sống", đưa những sản phẩm chất lượng cao đến với gia đình Việt.
+                                </p>
+                                <p>
+                                    Bếp 365 thường xuyên lựa chọn, cập nhật, mang những tiện ích và công nghệ mới nhất, từ những thương hiệu chất lượng hàng đầu thế giới đến với khách hàng tại Việt Nam.
+                                </p>
+                                <p>
+                                    Trải qua hơn 10 năm phấn đấu, Bếp 365 trân trọng cảm ơn quý khách hàng đã tin tưởng bình chọn là một trong những nhà bán lẻ hàng đầu, có dịch vụ chăm sóc khách hàng tốt nhất.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 footer">
+                <p>&copy; 2024 Bep364.vn |  Nguyễn Thanh Hiệp | mssv:22641211</p>
+            </div>
+        </div>
+        </div>
+        <div id="id01" class="modal1">
+  
+            <form class="modal-content animate" id="loginForm">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="/img/avatar.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container" id="moda-container">
+                <label for="uname"><b>Tài khoản</b></label>
+                <input type="text" placeholder="Nhập tài khoản" name="uname" required class="input">
+          
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu" name="psw" required class="input">
+                  
+                <button class="nut" type="submit">Đăng nhập</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1" id="moda-container">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Thoát</button>
+                <span class="psw">Quên <a href="#">Mật khẩu?</a></span>
+              </div>
+            </form>
+          </div>
+          
+  
+          <div id="id02" class="modal1">
+            <form class="modal-content animate"id="registerForm">
+              <div class="container" id="moda-container">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close1" title="Close Modal">&times;</span>
+                <h1>Đăng ký</h1>
+                <p>Vui lòng lòng điền đầy đủ thông tin để tạo tài khoản</p>
+                <hr>
+                <label for="usernameDK"><b>Tên tài khoản</b></label>
+                <input class="input" type="text" placeholder="Nhập tên tài khoản" name="usernameDK" required>
+          
+                <label for="pswDK"><b>Mật khẩu</b></label>
+                <input class="input" type="password" placeholder="Enter Password" name="pswDK" required>
+          
+                <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                <input class="input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ mật khẩu
+                </label>
+          
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          
+                <div class="clearfix">
+                  <button class="cancelbtn1" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Hủy</button>
+                  <button class="signupbtn" type="submit" class="signupbtn">Đăng ký</button>
+                </div>
+              </div>
+            </form>
+          </div>
+            <!-- Cập nhật phần script của bạn -->
+        <script src="/js/taiKhoanHome.js"></script>
+    </div>
+    <script src="/js/chitiet.js"></script>
+    <script>
+        // Lấy thông tin sản phẩm từ Local Storage
+        const img = localStorage.getItem("productImg");
+        const name = localStorage.getItem("productName");
+        const gia = localStorage.getItem("productPrice");
+        const detailsLink = localStorage.getItem("detailsLink");
+
+        // Hiển thị thông tin sản phẩm
+        document.getElementById("productImg").src = img;
+        document.getElementById("productName").textContent = name;
+        document.getElementById("productPrice").textContent = gia;
+    </script>
+</body>
+</html>

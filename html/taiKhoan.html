@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản</title>
+    <link href="/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap/elegant-icons.css">
+    <script src="/bootstrap/jquery-3.7.1.min.js"></script>
+    <script src="/bootstrap/bootstrap.min copy.js"></script>
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>  
+    <link rel="stylesheet" href="/css/taiKhoan.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <header>
+              <div class="row">
+                <div class="col-10">
+                  <img src="/img/Logo-removebg-preview.png" alt="">
+                </div>
+                <div class="col-2 btnLog">
+                  <button class="nut1" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button>
+                  <button class="nut2" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng ký</button>
+                  <p id="wellcome">*</p>
+                </div>
+              </div>
+            </header>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/html/index.html">Trang Chủ</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/sanpham.html">Sản phẩm</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/gioithieu.html">Giới thiệu</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/taiKhoan.html">Tài khoản</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="text" placeholder="Tìm kiếm">
+                      <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+          </div>
+        <div class="row">
+          
+        </div>
+        <table class="table bg-light">
+            <tr>
+                <th style="width: 20%;"><img src="/img/avatar.png" alt="" class="rounded-circle"></th>
+                <th id="name" style="text-align: left;vertical-align: bottom; font-size: 30px;">--/--</th>
+            </tr>
+        </table>
+        <div class="row text-center">
+            <h3>Thông tin người dùng</h3>
+        </div>
+        <div class="row">
+            <table class="table table-info">
+                <tr>
+                    <th style="width: 15%;">
+                        <p>Họ và tên</p>
+                    </th>
+                    <td>
+                        <p id="hoTen">___</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Ngày sinh</p>
+                    </th>
+                    <td>
+                        <p id="ngaySinh">___</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Số điện thoại</p>
+                    </th>
+                    <td>
+                        <p id="sdt">___</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Email</p>
+                    </th>
+                    <td>
+                        <p id="email">___</p>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#myModal" id="capnhat" disabled>
+            Cập nhật thông tin
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-12 footer">
+            <p>&copy; 2024 Bep364.vn |  Nguyễn Thanh Hiệp | mssv:22641211</p>
+          </div>
+        </div>
+        
+        
+        <div id="id01" class="modal1">
+  
+            <form class="modal-content animate" id="loginForm">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="/img/avatar.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container" id="moda-container">
+                <label for="uname"><b>Tài khoản</b></label>
+                <input type="text" placeholder="Nhập tài khoản" name="uname" required class="input">
+          
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu" name="psw" required class="input">
+                  
+                <button class="nut" type="submit">Đăng nhập</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1" id="moda-container">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Thoát</button>
+                <span class="psw">Quên <a href="#">Mật khẩu?</a></span>
+              </div>
+            </form>
+          </div>
+          
+
+          <div id="id02" class="modal1">
+            <form class="modal-content animate"id="registerForm">
+              <div class="container" id="moda-container">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close1" title="Close Modal">&times;</span>
+                <h1>Đăng ký</h1>
+                <p>Vui lòng lòng điền đầy đủ thông tin để tạo tài khoản</p>
+                <hr>
+                <label for="usernameDK"><b>Tên tài khoản</b></label>
+                <input class="input" type="text" placeholder="Nhập tên tài khoản" name="usernameDK" required>
+          
+                <label for="pswDK"><b>Mật khẩu</b></label>
+                <input class="input" type="password" placeholder="Enter Password" name="pswDK" required>
+          
+                <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                <input class="input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ mật khẩu
+                </label>
+          
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          
+                <div class="clearfix">
+                  <button class="cancelbtn1" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Hủy</button>
+                  <button class="signupbtn" type="submit" class="signupbtn">Đăng ký</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Cập nhật thông tin</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                        <label for="lbTen">Họ và tên: </label>
+                        <input type="text" onblur="ktTen();" class="form-control" id="txtTen" aria-describedby="txtMa" placeholder="Nhập họ và tên">
+                        <small id="tbTen" class="form-text text-muted">*</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lbngaySinh">Ngày sinh: </label>
+                        <input type="date" class="form-control" id="txtNS" onblur="validateDOB();">
+                        <small id="tbNS" class="form-text text-muted">*</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lbSDT">Số điện thoại: </label>
+                        <input type="text" class="form-control" id="txtSDT" aria-describedby="txtSDT" placeholder="Nhập số điện thoại:" onblur="ktSDT()">
+                        <small id="tbSDT" class="form-text text-muted">*</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="lbEmail">Email: </label>
+                      <input type="text" class="form-control" id="txtEmail" aria-describedby="txtEmail" placeholder="Nhập email:" onblur="ktEmail()">
+                      <small id="tbEmail" class="form-text text-muted">*</small>
+                  </div>
+                    
+                  </form>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="update()">Cập nhật</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="/js/taiKhoan.js"></script> 
+</body>
+</html>
